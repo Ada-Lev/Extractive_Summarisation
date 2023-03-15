@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.1)  11 MAR 2023 09:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.1)  15 MAR 2023 19:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -156,71 +156,48 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 \Hy@SectionHShift=\skip50
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 36.
- (./lineno.sty
-Package: lineno 2005/11/02 line numbers on paragraphs v4.41
-\linenopenalty=\count270
-\output=\toks17
-\linenoprevgraf=\count271
-\linenumbersep=\dimen145
-\linenumberwidth=\dimen146
-\c@linenumber=\count272
-\c@pagewiselinenumber=\count273
-\c@LN@truepage=\count274
-\c@internallinenumber=\count275
-\c@internallinenumbers=\count276
-\quotelinenumbersep=\dimen147
-\bframerule=\dimen148
-\bframesep=\dimen149
-\bframebox=\box51
-LaTeX Info: Redefining \\ on input line 3056.
-)
-\cv@tmpc@=\count277
-\cv@tmpc=\count278
- (/home/ada/.TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count279
-) (/home/ada/.TinyTeX/texmf-dist/tex/latex/geometry/geometry.sty
+ (/home/ada/.TinyTeX/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
  (/home/ada/.TinyTeX/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count280
-\Gm@cntv=\count281
-\c@Gm@tempcnt=\count282
-\Gm@bindingoffset=\dimen150
-\Gm@wd@mp=\dimen151
-\Gm@odd@mp=\dimen152
-\Gm@even@mp=\dimen153
-\Gm@layoutwidth=\dimen154
-\Gm@layoutheight=\dimen155
-\Gm@layouthoffset=\dimen156
-\Gm@layoutvoffset=\dimen157
-\Gm@dimlist=\toks18
+\Gm@cnth=\count270
+\Gm@cntv=\count271
+\c@Gm@tempcnt=\count272
+\Gm@bindingoffset=\dimen145
+\Gm@wd@mp=\dimen146
+\Gm@odd@mp=\dimen147
+\Gm@even@mp=\dimen148
+\Gm@layoutwidth=\dimen149
+\Gm@layoutheight=\dimen150
+\Gm@layouthoffset=\dimen151
+\Gm@layoutvoffset=\dimen152
+\Gm@dimlist=\toks17
 )
 \titlebox=\skip51
  (/home/ada/.TinyTeX/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2022/03/01 v3.6b Customizing captions (AR)
  (/home/ada/.TinyTeX/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
-\caption@tempdima=\dimen158
-\captionmargin=\dimen159
-\caption@leftmargin=\dimen160
-\caption@rightmargin=\dimen161
-\caption@width=\dimen162
-\caption@indent=\dimen163
-\caption@parindent=\dimen164
-\caption@hangindent=\dimen165
+\caption@tempdima=\dimen153
+\captionmargin=\dimen154
+\caption@leftmargin=\dimen155
+\caption@rightmargin=\dimen156
+\caption@width=\dimen157
+\caption@indent=\dimen158
+\caption@parindent=\dimen159
+\caption@hangindent=\dimen160
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count283
-\c@continuedfloat=\count284
+\c@caption@flags=\count273
+\c@continuedfloat=\count274
 Package caption Info: hyperref package is loaded.
 ) (/home/ada/.TinyTeX/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip52
 \bibsep=\skip53
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count285
+\c@NAT@ctr=\count275
 )) (/home/ada/.TinyTeX/texmf-dist/tex/latex/psnfss/times.sty
 Package: times 2020/03/25 PSNFSS-v9.3 (SPQR) 
 ) (/home/ada/.TinyTeX/texmf-dist/tex/latex/base/latexsym.sty
@@ -235,19 +212,23 @@ LaTeX Font Info:    Trying to load font information for T1+ptm on input line 112
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )) (/home/ada/.TinyTeX/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
-\inpenc@prehook=\toks19
-\inpenc@posthook=\toks20
+\inpenc@prehook=\toks18
+\inpenc@posthook=\toks19
 ) (./microtype.sty
 Package: microtype 2021/12/10 v3.0b Micro-typographical refinements (RS)
-\MT@toks=\toks21
-\MT@count=\count286
-\MT@tempbox=\box52
+ (/home/ada/.TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count276
+)
+\MT@toks=\toks20
+\MT@count=\count277
+\MT@tempbox=\box51
 LaTeX Info: Redefining \leftprotrusion on input line 1010.
 LaTeX Info: Redefining \rightprotrusion on input line 1018.
 LaTeX Info: Redefining \textls on input line 1173.
-\MT@outer@kern=\dimen166
+\MT@outer@kern=\dimen161
 LaTeX Info: Redefining \textmicrotypecontext on input line 1759.
-\MT@listname@count=\count287
+\MT@listname@count=\count278
  (./microtype-pdftex.def
 File: microtype-pdftex.def 2021/12/10 v3.0b Definitions specific to pdftex (RS)
 LaTeX Info: Redefining \lsstyle on input line 897.
@@ -266,39 +247,39 @@ Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 ) (/home/ada/.TinyTeX/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
  (/home/ada/.TinyTeX/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/home/ada/.TinyTeX/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks22
-\XKV@tempa@toks=\toks23
+\XKV@toks=\toks21
+\XKV@tempa@toks=\toks22
 )
-\XKV@depth=\count288
+\XKV@depth=\count279
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
-\zifour@ocount=\count289
+\zifour@ocount=\count280
 ) (/home/ada/.TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-10-26 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count290
-\l__pdf_internal_box=\box53
+\l__color_backend_stack_int=\count281
+\l__pdf_internal_box=\box52
 ) (./acl2023.aux)
 \openout1 = `acl2023.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-Package hyperref Info: Link coloring ON on input line 69.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+Package hyperref Info: Link coloring ON on input line 62.
  (./acl2023.out) (./acl2023.out)
 \@outlinefile=\write3
 \openout3 = `acl2023.out'.
@@ -340,11 +321,11 @@ Package hyperref Info: Link coloring ON on input line 69.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Info: Redefining \microtypecontext on input line 69.
-Package microtype Info: Applying patch `item' on input line 69.
-Package microtype Info: Applying patch `toc' on input line 69.
-Package microtype Info: Applying patch `eqnum' on input line 69.
-Package microtype Info: Applying patch `footnote' on input line 69.
+LaTeX Info: Redefining \microtypecontext on input line 62.
+Package microtype Info: Applying patch `item' on input line 62.
+Package microtype Info: Applying patch `toc' on input line 62.
+Package microtype Info: Applying patch `eqnum' on input line 62.
+Package microtype Info: Applying patch `footnote' on input line 62.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 
@@ -357,14 +338,14 @@ Package microtype Info: Automatic font expansion enabled (level 2),
 Package microtype Warning: No expansion set chosen, no default set declared. 
 (microtype)                Using empty set.
 
-LaTeX Info: Redefining \showhyphens on input line 69.
+LaTeX Info: Redefining \showhyphens on input line 62.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
 
 Package microtype Warning: I cannot find a protrusion list for font
 (microtype)                `T1/ptm/m/n/10.95'. Switching off
-(microtype)                protrusion for this font on input line 69.
+(microtype)                protrusion for this font on input line 62.
 
 (./upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
@@ -372,365 +353,203 @@ Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbat
 
 Package microtype Warning: I cannot find a protrusion list for font
 (microtype)                `T1/ptm/m/n/14.4'. Switching off
-(microtype)                protrusion for this font on input line 70.
+(microtype)                protrusion for this font on input line 63.
 
 
 Package microtype Warning: I cannot find a protrusion list for font
 (microtype)                `T1/ptm/b/n/14.4'. Switching off
-(microtype)                protrusion for this font on input line 70.
+(microtype)                protrusion for this font on input line 63.
 
 
 Package microtype Warning: I cannot find a protrusion list for font
 (microtype)                `T1/ptm/m/n/12'. Switching off
-(microtype)                protrusion for this font on input line 70.
+(microtype)                protrusion for this font on input line 63.
 
 
 Package microtype Warning: I cannot find a protrusion list for font
 (microtype)                `OT1/cmr/m/n/12'. Switching off
-(microtype)                protrusion for this font on input line 70.
+(microtype)                protrusion for this font on input line 63.
 
 
 Package microtype Warning: I cannot find a protrusion list for font
 (microtype)                `OT1/cmr/m/n/8'. Switching off
-(microtype)                protrusion for this font on input line 70.
+(microtype)                protrusion for this font on input line 63.
 
 
 Package microtype Warning: I cannot find a protrusion list for font
 (microtype)                `OT1/cmr/m/n/6'. Switching off
-(microtype)                protrusion for this font on input line 70.
+(microtype)                protrusion for this font on input line 63.
 
 
 Package microtype Warning: I cannot find a protrusion list for font
 (microtype)                `OML/cmm/m/it/12'. Switching off
-(microtype)                protrusion for this font on input line 70.
+(microtype)                protrusion for this font on input line 63.
 
 
 Package microtype Warning: I cannot find a protrusion list for font
 (microtype)                `OML/cmm/m/it/8'. Switching off
-(microtype)                protrusion for this font on input line 70.
+(microtype)                protrusion for this font on input line 63.
 
 
 Package microtype Warning: I cannot find a protrusion list for font
 (microtype)                `OML/cmm/m/it/6'. Switching off
-(microtype)                protrusion for this font on input line 70.
+(microtype)                protrusion for this font on input line 63.
 
 
 Package microtype Warning: I cannot find a protrusion list for font
 (microtype)                `OMS/cmsy/m/n/12'. Switching off
-(microtype)                protrusion for this font on input line 70.
+(microtype)                protrusion for this font on input line 63.
 
 
 Package microtype Warning: I cannot find a protrusion list for font
 (microtype)                `OMS/cmsy/m/n/8'. Switching off
-(microtype)                protrusion for this font on input line 70.
+(microtype)                protrusion for this font on input line 63.
 
 
 Package microtype Warning: I cannot find a protrusion list for font
 (microtype)                `OMS/cmsy/m/n/6'. Switching off
-(microtype)                protrusion for this font on input line 70.
+(microtype)                protrusion for this font on input line 63.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 70.
+(Font)              <12> on input line 63.
 
 Package microtype Warning: I cannot find a protrusion list for font
 (microtype)                `OMX/cmex/m/n/12'. Switching off
-(microtype)                protrusion for this font on input line 70.
+(microtype)                protrusion for this font on input line 63.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 70.
+(Font)              <8> on input line 63.
 
 Package microtype Warning: I cannot find a protrusion list for font
 (microtype)                `OMX/cmex/m/n/8'. Switching off
-(microtype)                protrusion for this font on input line 70.
+(microtype)                protrusion for this font on input line 63.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 70.
+(Font)              <6> on input line 63.
 
 Package microtype Warning: I cannot find a protrusion list for font
 (microtype)                `OMX/cmex/m/n/6'. Switching off
-(microtype)                protrusion for this font on input line 70.
+(microtype)                protrusion for this font on input line 63.
 
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 70.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 63.
 (/home/ada/.TinyTeX/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 
 Package microtype Warning: I cannot find a protrusion list for font
 (microtype)                `U/lasy/m/n/12'. Switching off
-(microtype)                protrusion for this font on input line 70.
+(microtype)                protrusion for this font on input line 63.
 
 
 Package microtype Warning: I cannot find a protrusion list for font
 (microtype)                `U/lasy/m/n/8'. Switching off
-(microtype)                protrusion for this font on input line 70.
+(microtype)                protrusion for this font on input line 63.
 
 
 Package microtype Warning: I cannot find a protrusion list for font
 (microtype)                `U/lasy/m/n/6'. Switching off
-(microtype)                protrusion for this font on input line 70.
+(microtype)                protrusion for this font on input line 63.
 
 
 Package microtype Warning: I cannot find a protrusion list for font
 (microtype)                `T1/ptm/b/n/12'. Switching off
-(microtype)                protrusion for this font on input line 70.
+(microtype)                protrusion for this font on input line 63.
 
-
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `T1/ptm/m/n/10'. Switching off
-(microtype)                protrusion for this font on input line 71.
-
-
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `OT1/cmr/m/n/10.95'. Switching off
-(microtype)                protrusion for this font on input line 78.
-
-
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `OML/cmm/m/it/10.95'. Switching off
-(microtype)                protrusion for this font on input line 78.
-
-
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `OMS/cmsy/m/n/10.95'. Switching off
-(microtype)                protrusion for this font on input line 78.
-
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 78.
-
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `OMX/cmex/m/n/10.95'. Switching off
-(microtype)                protrusion for this font on input line 78.
-
-
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `U/lasy/m/n/10.95'. Switching off
-(microtype)                protrusion for this font on input line 78.
-
-
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `T1/ptm/m/n/8'. Switching off
-(microtype)                protrusion for this font on input line 78.
-
-
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `T1/ptm/m/n/9'. Switching off
-(microtype)                protrusion for this font on input line 78.
-
-
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `OT1/cmr/m/n/9'. Switching off
-(microtype)                protrusion for this font on input line 78.
-
-
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `OT1/cmr/m/n/5'. Switching off
-(microtype)                protrusion for this font on input line 78.
-
-
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `OML/cmm/m/it/9'. Switching off
-(microtype)                protrusion for this font on input line 78.
-
-
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `OML/cmm/m/it/5'. Switching off
-(microtype)                protrusion for this font on input line 78.
-
-
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `OMS/cmsy/m/n/9'. Switching off
-(microtype)                protrusion for this font on input line 78.
-
-
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `OMS/cmsy/m/n/5'. Switching off
-(microtype)                protrusion for this font on input line 78.
-
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 78.
-
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `OMX/cmex/m/n/9'. Switching off
-(microtype)                protrusion for this font on input line 78.
-
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 78.
-
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `OMX/cmex/m/n/5'. Switching off
-(microtype)                protrusion for this font on input line 78.
-
-
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `U/lasy/m/n/9'. Switching off
-(microtype)                protrusion for this font on input line 78.
-
-
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `U/lasy/m/n/5'. Switching off
-(microtype)                protrusion for this font on input line 78.
-
-
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `T1/ptm/m/n/6'. Switching off
-(microtype)                protrusion for this font on input line 78.
-
-LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 78.
+LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 63.
 (/home/ada/.TinyTeX/texmf-dist/tex/latex/inconsolata/t1zi4.fd
 File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 9.0pt on input line 78.
+(Font)              scaled to size 12.0pt on input line 63.
 
 
 Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `T1/zi4/m/n/9'. Switching off
-(microtype)                protrusion for this font on input line 78.
+(microtype)                `T1/zi4/m/n/12'. Switching off
+(microtype)                protrusion for this font on input line 63.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 78--78
-[][][][][]$\T1/zi4/m/n/9 (+20) http : / / acl-[]org . github . io / ACLPUB / formatting .
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 78--78
-[][][][][]$\T1/zi4/m/n/9 (+20) https : / / 2023 . aclweb . org / calls / main _
- []
-
-LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 10.95pt on input line 79.
 
 Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `T1/zi4/m/n/10.95'. Switching off
-(microtype)                protrusion for this font on input line 79.
+(microtype)                `T1/ptm/m/n/10'. Switching off
+(microtype)                protrusion for this font on input line 64.
 
 
 Package microtype Warning: I cannot find a protrusion list for font
 (microtype)                `T1/ptm/b/n/10.95'. Switching off
-(microtype)                protrusion for this font on input line 92.
+(microtype)                protrusion for this font on input line 74.
 
-Package textcomp Info: Symbol \textasciigrave not provided by
-(textcomp)             font family zi4 in TS1 encoding.
-(textcomp)             Default family used instead on input line 96.
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 96.
-(/home/ada/.TinyTeX/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
-)
-
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `T1/cmtt/m/n/10.95'. Switching off
-(microtype)                protrusion for this font on input line 96.
-
-LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 96.
-(/home/ada/.TinyTeX/texmf-dist/tex/latex/base/ts1cmtt.fd
-File: ts1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
-)
-
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `TS1/cmtt/m/n/10.95'. Switching off
-(microtype)                protrusion for this font on input line 96.
-
-LaTeX Font Info:    Trying to load font information for TS1+zi4 on input line 99.
-(/home/ada/.TinyTeX/texmf-dist/tex/latex/inconsolata/ts1zi4.fd
-File: ts1zi4.fd 2018/01/14 TS1/zi4 (Inconsolata)
-)
-LaTeX Font Info:    Font shape `TS1/zi4/m/n' will be
-(Font)              scaled to size 10.95pt on input line 99.
+! Undefined control sequence.
+l.91 \includegraphics
+                     [scale=0.5]{unigrams.pdf}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
 
 Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `TS1/zi4/m/n/10.95'. Switching off
-(microtype)                protrusion for this font on input line 99.
+(microtype)                `OT1/cmr/m/n/10.95'. Switching off
+(microtype)                protrusion for this font on input line 138.
 
 
 Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `T1/ptm/m/it/10'. Switching off
-(microtype)                protrusion for this font on input line 115.
-
-[1{/home/ada/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
-
-
-
-] [2]
-Underfull \hbox (badness 10000) in paragraph at lines 247--247
-[][][][][]$\T1/zi4/m/n/9 (+20) https : / / www . aclweb . org / portal / content /
- []
+(microtype)                `OML/cmm/m/it/10.95'. Switching off
+(microtype)                protrusion for this font on input line 138.
 
 
 Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `T1/ptm/m/it/10.95'. Switching off
-(microtype)                protrusion for this font on input line 267.
+(microtype)                `OMS/cmsy/m/n/10.95'. Switching off
+(microtype)                protrusion for this font on input line 138.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 138.
+
+Package microtype Warning: I cannot find a protrusion list for font
+(microtype)                `OMX/cmex/m/n/10.95'. Switching off
+(microtype)                protrusion for this font on input line 138.
+
+
+Package microtype Warning: I cannot find a protrusion list for font
+(microtype)                `U/lasy/m/n/10.95'. Switching off
+(microtype)                protrusion for this font on input line 138.
+
+LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
+(Font)              scaled to size 10.95pt on input line 142.
+
+Package microtype Warning: I cannot find a protrusion list for font
+(microtype)                `T1/zi4/m/n/10.95'. Switching off
+(microtype)                protrusion for this font on input line 142.
 
 (./acl2023.bbl
 
 Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `OT1/cmr/m/n/10'. Switching off
-(microtype)                protrusion for this font on input line 14.
+(microtype)                `T1/ptm/m/it/10'. Switching off
+(microtype)                protrusion for this font on input line 9.
+
+) [1{/home/ada/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `OT1/cmr/m/n/7'. Switching off
-(microtype)                protrusion for this font on input line 14.
 
+] [2] (./acl2023.aux)
 
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `OML/cmm/m/it/10'. Switching off
-(microtype)                protrusion for this font on input line 14.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `OML/cmm/m/it/7'. Switching off
-(microtype)                protrusion for this font on input line 14.
-
-
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `OMS/cmsy/m/n/10'. Switching off
-(microtype)                protrusion for this font on input line 14.
-
-
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `OMS/cmsy/m/n/7'. Switching off
-(microtype)                protrusion for this font on input line 14.
-
-
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `OMX/cmex/m/n/10'. Switching off
-(microtype)                protrusion for this font on input line 14.
-
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 14.
-
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `OMX/cmex/m/n/7'. Switching off
-(microtype)                protrusion for this font on input line 14.
-
-
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `U/lasy/m/n/10'. Switching off
-(microtype)                protrusion for this font on input line 14.
-
-
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `U/lasy/m/n/7'. Switching off
-(microtype)                protrusion for this font on input line 14.
-
-) [3] (./acl2023.aux)
 Package rerunfilecheck Info: File `acl2023.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 13083 strings out of 478053
- 207641 string characters out of 5840949
- 1888793 words of memory out of 5000000
- 32609 multiletter control sequences out of 15000+600000
- 567787 words of font info for 311 fonts, out of 8000000 for 9000
+ 12475 strings out of 478053
+ 198958 string characters out of 5840949
+ 1870793 words of memory out of 5000000
+ 32251 multiletter control sequences out of 15000+600000
+ 545231 words of font info for 167 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 87i,10n,91p,1004b,541s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/home/ada/.TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}{/home/ada/.TinyTeX/texmf-dist/fonts/enc/dvips/inconsolata/i4-ts1.enc} </home/ada/.TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tctt1095.600pk>{/home/ada/.TinyTeX/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-0.enc}</home/ada/.TinyTeX/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></home/ada/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/ada/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></home/ada/.TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></home/ada/.TinyTeX/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></home/ada/.TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></home/ada/.TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on acl2023.pdf (3 pages, 113583 bytes).
+ 87i,10n,91p,1004b,454s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/home/ada/.TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}{/home/ada/.TinyTeX/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-0.enc}</home/ada/.TinyTeX/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></home/ada/.TinyTeX/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></home/ada/.TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></home/ada/.TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on acl2023.pdf (2 pages, 64189 bytes).
 PDF statistics:
- 167 PDF objects out of 1000 (max. 8388607)
- 144 compressed objects within 2 object streams
- 34 named destinations out of 1000 (max. 500000)
- 135169 words of extra memory for PDF output out of 154059 (max. 10000000)
+ 90 PDF objects out of 1000 (max. 8388607)
+ 77 compressed objects within 1 object stream
+ 23 named destinations out of 1000 (max. 500000)
+ 75777 words of extra memory for PDF output out of 89155 (max. 10000000)
 
