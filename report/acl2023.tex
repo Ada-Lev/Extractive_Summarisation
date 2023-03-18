@@ -30,6 +30,8 @@
 % the typewriter font.
 \usepackage{inconsolata}
 
+\usepackage{graphicx}
+
 
 % If the title and author information does not fit in the area allocated, uncomment the following
 %
@@ -57,12 +59,12 @@
 
 \author{Kristina Levina \\
   Course code: 732A81 \\
-  \texttt{LiU-ID: krile102} \\}
+  LiU-ID: krile102 \\}
 
 \begin{document}
 \maketitle
 \begin{abstract}
-This project aims at developing a tool to generate a summary automatically based on the main text of a biomedical research manuscript. To this end, extractive summarisation is employed. The motivation behind choosing extractive summarisation is, in essense, the neccessety to preserve the key sentences from the main text. Extractive summarisation will retrieve sentences based on their importance without rephrasing them, thereby excluding misinterpretations. This is crucial for scientific texts. In this project, SumPubMed dataset was used. According to the literature, SumPubMed dataset was created specifically for testing summarisation tools of biomedical research articles. Two algorithms were chosen to implement this task: TextRank as a baseline and a pretrained transformer from Hugging Face. Their performance was assessed using X and Y metrics. The obtained results show that Y better suits for the considered task. 
+This project aims at building a tool to generate a summary of a biomedical research manuscript automatically based on the main text. To this end, extractive summarisation is employed. The motivation behind choosing extractive summarisation is, in essense, the neccessety to preserve key sentences from the main text. Extractive summarisation will retrieve sentences based on their importance without rephrasing them, thereby excluding misinterpretations. The meaning preservation is crucial for scientific texts. In this project, PubMed dataset is used. A subset of 100 articles and their abstracts have been manually looked through and filtered so that articles and abstracts have similar characteristincs in terms of relative number of sentences of the abstract to the main text. As a result, 24 articles and their human-written summaries (abstracts) were selected. Three algorithms were chosen for extractive summarisation: TextRank, WordRank, and their combination. Their performance was assessed using ROUGE (recall), BLEU (precision), and F1 score. The obtained results show that Y better suits for the considered task. 
 
 \end{abstract}
 
@@ -77,58 +79,131 @@ With increasing volume of published articles in medical research, it becomes inc
 
 \section{Data}
 
+Data are taken from the paper by \citet{cohan2018discourse}. Data are hosted in \href{https://github.com/armancohan/long-summarization}{GitHub}. The initial dataset contains around 100,000 different OpenAccess PubMed articles. Each article has the following fields: 
+\begin{verbatim}
+{ 
+  'article_id': str,
+  'abstract_text': List[str],
+  'article_text': List[str],
+  'section_names': List[str],
+  'sections': List[List[str]]
+}
+\end{verbatim}
+
+For this project, I have looked through 100 articles and considered only articles meeting the following assumptions: First, the provided abstract should be between 8\%--12\% of the main text in terms of number of sentences. This is to ensure similar conditions for generating summaries. Second, the number of sentences of the main manuscript text should be larger than 50 to meet the objective of long document summarisation. Out of 100 articles, only 24 met this conditions.
+
+An example of the beginning of one chosen article is as follows:
+
+\texttt{'["anxiety affects quality of life in those living with parkinson \'s disease ( pd ) more so than overall cognitive status , motor deficits , apathy , and depression [ 13 ] .", \'although anxiety and depression are often related and coexist in pd patients , recent research suggests that anxiety rather than depression is the most prominent and prevalent mood disorder in pd [ 5 , 6 ] . yet ,\', }
+
+The beginning of the corresponding summary is as follows:
+
+\texttt{'["<S> research on the implications of anxiety in parkinson \'s disease ( pd ) has been neglected despite its prevalence in nearly 50\% of patients and its negative impact on quality of life . </S>", \'<S> previous reports have noted that neuropsychiatric symptoms impair cognitive performance in pd patients }
+
+The data have been already tokenised. From the abstract text, <S> and </S> tags were removed. Further preprocessing included stop word removal, lemmatisation, and non-alphabetic characters' removal. This preprocessing has been done using the Spacy language model. Stop words were removed to avoid sentence ranking based on common and frequent words rather than important words. Lemmatisation was used to treat same words in an exactly same manner. Non-alphabetic characters were removed to avoid their influence on the ranking results. Punctuation and numerals should not affect the importance of the sentence.
+ 
+
+
 \section{Method}
 \subsection{TextRank}
 \subsection{WordRank}
 \subsection{Hybrid}
+\subsection{Evaluation}
 
 \section{Results}
 
-\citet{reza2020}
+The ROUGE\_1, BLEU\_1, and F1\_1 scores respectively denote ROUGE, BLEU, and F1 scores of unigrams between the human-written and generated summaries. The results are shown in Fig. \ref{fig:uni} and Tables \ref{tab:means} and \ref{tab:mors}. Both TextRank (36.0) and Hybrid80 (35.9) yield high mean F1\_1 scores relative to other algorithms, but considering margin of error, the estimation by Hybrid80 is slightly more robust (35.9 $\pm$ 3.3 versus 36.0 $\pm$ 3.7). Both TextRank (27.0) and Hybrid80 (26.8) yield high mean BLEU\_1 scores, but considering margin of error, again the estimation by Hybrid80 is slightly more robust (26.8 $\pm$ 3.2 versus 27.0 $\pm$ 3.7). WordRank yields the highest ROUGE\_1 score (60.1 $\pm$ 4.1). 
 
-\begin{figure}
- \centering
-\includegraphics[scale=0.5]{unigrams.pdf}
-\caption{An example graph}
-\label{fig:x cubed graph}
+The ROUGE\_2, BLEU\_2, and F1\_2 scores respectively denote the ROUGE, BLEU, and F1 scores of bigrams between the human-written and generated summaries. The results are shown in \ref{fig:bi} and Tables \ref{tab:means} and \ref{tab:mors}. The ROUGE\_3, BLEU\_3, and F1\_3 scores respectively denote the ROUGE, BLEU, and F1 scores of trigrams between the human-written and generated summaries. The results are shown in \ref{fig:tri} and Tables \ref{tab:means} and \ref{tab:mors}. TextRank shows the highest values of ROUGE\_2 and ROUGE\_3 (21.2 $\pm$ 4.9 and 10 $\pm$ 3.7, respectively), BLEU\_2 and BLUE\_3 (10.1 $\pm$ 2.7 and 5 $\pm$ 2.0, respectively), and F1\_2 and F1\_3 (13.4 $\pm$ 3.2 and 6.5 $\pm$ 2.5, respectively).
+
+The total running times of all four algorithms for summarisation of 24 data samples is shown in Table \ref{tab:time}. TextRank (1 min) performs 16 times faster than other algorithms (16 min).
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale = 0.5]{../figures/unigrams.pdf}
+\label{fig:uni}
+\caption{ROUGE, BLEU, and F1 score of unigrams between the human-written and generated summaries.}
 \end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale = 0.5]{../figures/bigrams.pdf}
+\label{fig:bi}
+\caption{ROUGE, BLEU, and F1 score of bigrams between the human-written and generated summaries.}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale = 0.5]{../figures/trigrams.pdf}
+\label{fig:tri}
+\caption{ROUGE, BLEU, and F1 score of trigrams between the human-written and generated summaries.}
+\end{figure}
+
+\begin{table*}[!h]
+\centering
+\begin{tabular}{l|llll}
+\hline
+&\textbf{TextRank} & \textbf{WordRank} & \textbf{Hybrid64} & \textbf{Hybrid80} \\
+\hline
+ROUGE\_1 & 57.4 & \textbf{60.1} & 57.2 & 57.1\\
+ROUGE\_2 & \textbf{21.2} & 20.3 & 19.9 & 20.3\\
+ROUGE\_3 & \textbf{10.0} & 8.7 & 8.8 & 9.2\\
+BLEU\_1 & \textbf{27.0} & 20.8 & 26.7 & 26.8\\
+BLEU\_2 & \textbf{10.1} & 7.3 & 9.5 & 9.8\\
+BLEU\_3 & \textbf{5.0} & 3.5 & 4.4 & 4.7\\
+F1\_1 & \textbf{36.0} & 30.3 & 35.7 & 35.9\\
+F1\_2 & \textbf{13.4} & 10.4 & 12.6 & 12.9\\
+F1\_3  & \textbf{6.5} & 4.8 & 5.8 & 6.1\\
+\hline
+\end{tabular}
+
+\caption{\label{tab:means}
+Mean values of the ROUGE, BLEU, and F1 metrics for unigrams, bigrams, and trigrams yielded by TextRank, WordRank, Hybrid64, and Hybrid80 methods.
+}
+\end{table*}
+
+\begin{table*}[!h]
+\centering
+\begin{tabular}{l|llll}
+\hline
+&\textbf{TextRank} & \textbf{WordRank} & \textbf{Hybrid64} & \textbf{Hybrid80} \\
+\hline
+ROUGE\_1 & 4.7 & 4.1 & 4.1 & 4.3\\
+ROUGE\_2 & 4.9 & 4.6 & 4.4 & 4.7\\
+ROUGE\_3 & 3.7 & 3.2 & 3.3 & 3.5\\
+BLEU\_1 & 3.7 & 3.2 & 3.1 & 3.2\\
+BLEU\_2 & 2.7 & 2.2 & 2.3 & 2.5\\
+BLEU\_3 & 2.0 & 1.7 & 1.8 & 1.9\\
+F1\_1 &  3.7 & 3.6 & 3.2 & 3.3\\
+F1\_2 & 3.2 & 2.8 & 2.9 & 3.1\\
+F1\_3  & 2.5 & 2.0 & 2.2 & 2.4\\
+\hline
+\end{tabular}
+\caption{\label{tab:mors}
+Margins of error values of the ROUGE, BLEU, and F1 metrics for unigrams, bigrams, and trigrams yielded by TextRank, WordRank, Hybrid64, and Hybrid80 methods.
+}
+\end{table*}
+
+
+\begin{table*}[!h]
+\centering
+\begin{tabular}{l|llll}
+\hline
+&\textbf{TextRank} & \textbf{WordRank} & \textbf{Hybrid64} & \textbf{Hybrid80} \\
+\hline
+Running time (min) & 1 & 16 & 16 & 16\\
+\hline
+\end{tabular}
+\caption{\label{tab:time}
+Running time (min) of all four algorithms considered in this project.
+}
+\end{table*}
 
 
 \section{Discussion}
 
 \section{Conclusion}
 
-
-% \begin{table}
-% \centering
-% \begin{tabular}{lc}
-% \hline
-% \textbf{Command} & \textbf{Output}\\
-% \hline
-% \verb|{\"a}| & {\"a} \\
-% \verb|{\^e}| & {\^e} \\
-% \verb|{\`i}| & {\`i} \\ 
-% \verb|{\.I}| & {\.I} \\ 
-% \verb|{\o}| & {\o} \\
-% \verb|{\'u}| & {\'u}  \\ 
-% \verb|{\aa}| & {\aa}  \\\hline
-% \end{tabular}
-% \begin{tabular}{lc}
-% \hline
-% \textbf{Command} & \textbf{Output}\\
-% \hline
-% \verb|{\c c}| & {\c c} \\ 
-% \verb|{\u g}| & {\u g} \\ 
-% \verb|{\l}| & {\l} \\ 
-% \verb|{\~n}| & {\~n} \\ 
-% \verb|{\H o}| & {\H o} \\ 
-% \verb|{\v r}| & {\v r} \\ 
-% \verb|{\ss}| & {\ss} \\
-% \hline
-% \end{tabular}
-% \caption{Example commands for accented characters, to be used in, \emph{e.g.}, Bib\TeX{} entries.}
-% \label{tab:accents}
-% \end{table}
 
 
 
@@ -153,12 +228,6 @@ The style is based on the natbib package and supports all natbib citation comman
 It also supports commands defined in previous ACL style files for compatibility.
 }
 \end{table*}
-% The first line of the file must be
-% \begin{quote}
-% \begin{verbatim}
-% \documentclass[11pt]{article}
-% \end{verbatim}
-% \end{quote}
 
 
 
