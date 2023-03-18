@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.1)  18 MAR 2023 20:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.1)  18 MAR 2023 21:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -514,13 +514,6 @@ Package microtype Warning: I cannot find a protrusion list for font
 
 ]
 
-Package caption Warning: \label without proper reference on input line 124.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:uni' on page 2 undefined on input line 115.
-
-
 Package microtype Warning: I cannot find a protrusion list for font
 (microtype)                `OT1/cmr/m/n/10.95'. Switching off
 (microtype)                protrusion for this font on input line 115.
@@ -547,20 +540,6 @@ Package microtype Warning: I cannot find a protrusion list for font
 (microtype)                `U/lasy/m/n/10.95'. Switching off
 (microtype)                protrusion for this font on input line 115.
 
-
-Package caption Warning: \label without proper reference on input line 131.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:bi' on page 2 undefined on input line 117.
-
-
-Package caption Warning: \label without proper reference on input line 138.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:tri' on page 2 undefined on input line 117.
-
 <../figures/unigrams.pdf, id=33, 361.35pt x 289.08pt>
 File: ../figures/unigrams.pdf Graphic file (type pdf)
 <use ../figures/unigrams.pdf>
@@ -569,12 +548,12 @@ Package pdftex.def Info: ../figures/unigrams.pdf  used on input line 123.
 <../figures/bigrams.pdf, id=34, 361.35pt x 289.08pt>
 File: ../figures/bigrams.pdf Graphic file (type pdf)
 <use ../figures/bigrams.pdf>
-Package pdftex.def Info: ../figures/bigrams.pdf  used on input line 130.
+Package pdftex.def Info: ../figures/bigrams.pdf  used on input line 129.
 (pdftex.def)             Requested size: 180.67456pt x 144.53964pt.
 <../figures/trigrams.pdf, id=35, 361.35pt x 289.08pt>
 File: ../figures/trigrams.pdf Graphic file (type pdf)
 <use ../figures/trigrams.pdf>
-Package pdftex.def Info: ../figures/trigrams.pdf  used on input line 137.
+Package pdftex.def Info: ../figures/trigrams.pdf  used on input line 135.
 (pdftex.def)             Requested size: 180.67456pt x 144.53964pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -598,22 +577,19 @@ Package microtype Warning: I cannot find a protrusion list for font
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ) [3] [4] (./acl2023.aux)
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `acl2023.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 12928 strings out of 478053
- 206808 string characters out of 5840949
+ 12925 strings out of 478053
+ 206784 string characters out of 5840949
  1869793 words of memory out of 5000000
  32620 multiletter control sequences out of 15000+600000
- 547298 words of font info for 199 fonts, out of 8000000 for 9000
+ 547168 words of font info for 197 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  87i,10n,91p,1158b,469s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/home/ada/.TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}{/home/ada/.TinyTeX/texmf-dist/fonts/enc/dvips/inconsolata/i4-ts1.enc}{/home/ada/.TinyTeX/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-0.enc}</home/ada/.TinyTeX/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></home/ada/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/ada/.TinyTeX/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></home/ada/.TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></home/ada/.TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on acl2023.pdf (4 pages, 129643 bytes).
+Output written on acl2023.pdf (4 pages, 129279 bytes).
 PDF statistics:
  264 PDF objects out of 1000 (max. 8388607)
  123 compressed objects within 2 object streams

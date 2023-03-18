@@ -79,7 +79,7 @@ With increasing volume of published articles in medical research, it becomes inc
 
 \section{Data}
 
-Data are taken from the paper by \citet{cohan2018discourse}. Data are hosted in \href{https://github.com/armancohan/long-summarization}{GitHub}. The initial dataset contains around 100,000 different OpenAccess PubMed articles. Each article has the following fields: 
+Data are taken from the paper by \citet{cohan2018discourse}. This dataset contains a large collection (100,000) of scientific articles from the biomedical domain (OpenAccess PubMed articles). Data are hosted in \href{https://github.com/armancohan/long-summarization}{GitHub}. Each article has the following fields: 
 \begin{verbatim}
 { 
   'article_id': str,
@@ -100,7 +100,7 @@ The beginning of the corresponding summary is as follows:
 
 \texttt{'["<S> research on the implications of anxiety in parkinson \'s disease ( pd ) has been neglected despite its prevalence in nearly 50\% of patients and its negative impact on quality of life . </S>", \'<S> previous reports have noted that neuropsychiatric symptoms impair cognitive performance in pd patients }
 
-The data have been already tokenised. From the abstract text, <S> and </S> tags were removed. Further preprocessing included stop word removal, lemmatisation, and non-alphabetic characters' removal. This preprocessing has been done using the Spacy language model. Stop words were removed to avoid sentence ranking based on common and frequent words rather than important words. Lemmatisation was used to treat same words in an exactly same manner. Non-alphabetic characters were removed to avoid their influence on the ranking results. Punctuation and numerals should not affect the importance of the sentence.
+The data have been already tokenised. From the abstract text, <S> and </S> tags were removed. Further preprocessing included stop word removal, lemmatisation, and non-alphabetic characters' removal. This preprocessing has been done using the Spacy language model. Stop words were removed to avoid sentence ranking based on common and frequent words rather than important words. Lemmatisation was used to treat same words in an exactly same manner. Non-alphabetic characters were removed to avoid their influence on the ranking results. Punctuation and numerals should not affect the sentence importance.
  
 
 
@@ -114,29 +114,26 @@ The data have been already tokenised. From the abstract text, <S> and </S> tags 
 
 The ROUGE\_1, BLEU\_1, and F1\_1 scores respectively denote ROUGE, BLEU, and F1 scores of unigrams between the human-written and generated summaries. The results are shown in Fig. \ref{fig:uni} and Tables \ref{tab:means} and \ref{tab:mors}. Both TextRank (36.0) and Hybrid80 (35.9) yield high mean F1\_1 scores relative to other algorithms, but considering margin of error, the estimation by Hybrid80 is slightly more robust (35.9 $\pm$ 3.3 versus 36.0 $\pm$ 3.7). Both TextRank (27.0) and Hybrid80 (26.8) yield high mean BLEU\_1 scores, but considering margin of error, again the estimation by Hybrid80 is slightly more robust (26.8 $\pm$ 3.2 versus 27.0 $\pm$ 3.7). WordRank yields the highest ROUGE\_1 score (60.1 $\pm$ 4.1). 
 
-The ROUGE\_2, BLEU\_2, and F1\_2 scores respectively denote the ROUGE, BLEU, and F1 scores of bigrams between the human-written and generated summaries. The results are shown in \ref{fig:bi} and Tables \ref{tab:means} and \ref{tab:mors}. The ROUGE\_3, BLEU\_3, and F1\_3 scores respectively denote the ROUGE, BLEU, and F1 scores of trigrams between the human-written and generated summaries. The results are shown in \ref{fig:tri} and Tables \ref{tab:means} and \ref{tab:mors}. TextRank shows the highest values of ROUGE\_2 and ROUGE\_3 (21.2 $\pm$ 4.9 and 10 $\pm$ 3.7, respectively), BLEU\_2 and BLUE\_3 (10.1 $\pm$ 2.7 and 5 $\pm$ 2.0, respectively), and F1\_2 and F1\_3 (13.4 $\pm$ 3.2 and 6.5 $\pm$ 2.5, respectively).
+The ROUGE\_2, BLEU\_2, and F1\_2 scores respectively denote the ROUGE, BLEU, and F1 scores of bigrams between the human-written and generated summaries. The results are shown in Fig. \ref{fig:bi} and Tables \ref{tab:means} and \ref{tab:mors}. The ROUGE\_3, BLEU\_3, and F1\_3 scores respectively denote the ROUGE, BLEU, and F1 scores of trigrams between the human-written and generated summaries. The results are shown in Fig. \ref{fig:tri} and Tables \ref{tab:means} and \ref{tab:mors}. TextRank shows the highest values of ROUGE\_2 and ROUGE\_3 (21.2 $\pm$ 4.9 and 10 $\pm$ 3.7, respectively), BLEU\_2 and BLUE\_3 (10.1 $\pm$ 2.7 and 5 $\pm$ 2.0, respectively), and F1\_2 and F1\_3 (13.4 $\pm$ 3.2 and 6.5 $\pm$ 2.5, respectively).
 
 The total running times of all four algorithms for summarisation of 24 data samples is shown in Table \ref{tab:time}. TextRank (1 min) performs 16 times faster than other algorithms (16 min).
 
 \begin{figure}[!h]
 \centering
 \includegraphics[scale = 0.5]{../figures/unigrams.pdf}
-\label{fig:uni}
-\caption{ROUGE, BLEU, and F1 score of unigrams between the human-written and generated summaries.}
+\caption{ROUGE, BLEU, and F1 score of unigrams between the human-written and generated summaries.\label{fig:uni}}
 \end{figure}
 
 \begin{figure}[!h]
 \centering
 \includegraphics[scale = 0.5]{../figures/bigrams.pdf}
-\label{fig:bi}
-\caption{ROUGE, BLEU, and F1 score of bigrams between the human-written and generated summaries.}
+\caption{ROUGE, BLEU, and F1 score of bigrams between the human-written and generated summaries.\label{fig:bi}}
 \end{figure}
 
 \begin{figure}[!h]
 \centering
 \includegraphics[scale = 0.5]{../figures/trigrams.pdf}
-\label{fig:tri}
-\caption{ROUGE, BLEU, and F1 score of trigrams between the human-written and generated summaries.}
+\caption{ROUGE, BLEU, and F1 score of trigrams between the human-written and generated summaries.\label{fig:tri}}
 \end{figure}
 
 \begin{table*}[!h]
