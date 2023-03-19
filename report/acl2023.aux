@@ -13,49 +13,61 @@
 \gdef\HyperFirstAtBeginDocument#1{#1}
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{widyassari2019literature}
+\citation{widyassari2019literature}
+\citation{mihalcea2004textrank}
+\citation{garcia2008text}
+\citation{widyassari2019literature}
 \citation{rogers2002google}
 \citation{rogers2002google}
+\newlabel{eq:pr}{{1}{1}{PageRank}{equation.2.1}{}}
 \citation{bastos2021inverse}
 \citation{mihalcea2004textrank}
-\newlabel{eq:pr}{{1}{1}{PageRank}{equation.2.1}{}}
-\newlabel{subsect:textrank}{{2.2}{1}{TextRank}{subsection.2.2}{}}
 \citation{reza2020}
 \citation{devlin2019google}
 \citation{rogers2021primer}
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:PR}{{1}{2}{Figure source: \href {https://en.wikipedia.org/wiki/File:PageRanks-Example.svg}{Wikipedia}. Illustration of the PageRank algorithm. The percentage shows the perceived importance, and the arrows represent hyperlinks.\relax }{figure.caption.1}{}}
+\newlabel{subsect:textrank}{{2.2}{2}{TextRank}{subsection.2.2}{}}
+\newlabel{fig:textrank}{{2}{2}{Flowchart of TextRank.\relax }{figure.caption.2}{}}
+\newlabel{subsect:wordrank}{{2.3}{2}{WordRank}{subsection.2.3}{}}
+\newlabel{fig:wordrank}{{3}{2}{Flowchart of WordRank.\relax }{figure.caption.3}{}}
 \citation{liu2019text}
 \citation{liu2019text}
 \citation{liu2019text}
 \citation{lin2003automatic}
 \citation{lin2003automatic}
 \citation{papineni2002bleu}
-\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{fig:PR}{{1}{2}{Figure source: \href {https://en.wikipedia.org/wiki/File:PageRanks-Example.svg}{Wikipedia}. Illustration of the PageRank algorithm. The percentage shows the perceived importance, and the arrows represent hyperlinks.\relax }{figure.caption.1}{}}
-\newlabel{fig:textrank}{{2}{2}{Flowchart of TextRank.\relax }{figure.caption.2}{}}
-\newlabel{subsect:wordrank}{{2.3}{2}{WordRank}{subsection.2.3}{}}
-\newlabel{fig:wordrank}{{3}{2}{Flowchart of WordRank.\relax }{figure.caption.3}{}}
-\newlabel{eq:f1}{{2}{2}{Evaluation metrics}{equation.2.2}{}}
 \citation{cohan2018discourse}
-\newlabel{fig:bert}{{4}{3}{Figure source: \citet {liu2019text}.Architecture of the original BERT model (left) and BERTSUM (right). The input document is a sequence on top. It is followed by the summation of three types of embeddings for each token. The summed vectors are used as input embeddings to several bidirectional Transformer layers, generating contextual vectors for each token. BERTSUM extends BERT by inserting multiple [CLS] symbols to learn sentence representations and using interval segmentation embeddings (illustrated in red and green color) to distinguish multiple sentences.\relax }{figure.caption.4}{}}
+\newlabel{eq:f1}{{2}{3}{Evaluation metrics}{equation.2.2}{}}
 \newlabel{sect:data}{{3}{3}{Data}{section.3}{}}
+\citation{reza2020}
+\citation{reza2020}
+\citation{reza2020}
+\newlabel{fig:bert}{{4}{4}{Figure source: \citet {liu2019text}.Architecture of the original BERT model (left) and BERTSUM (right). The input document is a sequence on top. It is followed by the summation of three types of embeddings for each token. The summed vectors are used as input embeddings to several bidirectional Transformer layers, generating contextual vectors for each token. BERTSUM extends BERT by inserting multiple [CLS] symbols to learn sentence representations and using interval segmentation embeddings (illustrated in red and green color) to distinguish multiple sentences.\relax }{figure.caption.4}{}}
+\newlabel{fig:uni}{{5}{5}{ROUGE, BLEU, and F1 score of unigrams between the human-written and generated summaries.\relax }{figure.caption.5}{}}
+\newlabel{tab:means}{{1}{6}{Mean values of the ROUGE, BLEU, and F1 metrics for unigrams, bigrams, and trigrams yielded by TextRank, WordRank, Hybrid64, Hybrid80, and BERTSUM methods. \relax }{table.caption.8}{}}
+\newlabel{tab:mors}{{2}{6}{Margins of error values of the ROUGE, BLEU, and F1 metrics for unigrams, bigrams, and trigrams yielded by TextRank, WordRank, Hybrid64, Hybrid80, and BERTSUM methods. \relax }{table.caption.9}{}}
+\newlabel{tab:time}{{3}{6}{Running time (min) of all five algorithms considered in this project. \relax }{table.caption.10}{}}
+\newlabel{fig:bi}{{6}{6}{ROUGE, BLEU, and F1 score of bigrams between the human-written and generated summaries.\relax }{figure.caption.6}{}}
+\newlabel{fig:tri}{{7}{6}{ROUGE, BLEU, and F1 score of trigrams between the human-written and generated summaries.\relax }{figure.caption.7}{}}
+\citation{reza2020}
+\citation{reza2020}
 \citation{reza2020}
 \citation{reza2020}
 \citation{reza2020}
 \bibdata{custom}
 \bibcite{bastos2021inverse}{{1}{2021}{{Bastos et~al.}}{{Bastos, Sales, Di~Cesare, Tayeb, and Le~Cam}}}
-\newlabel{fig:uni}{{5}{5}{ROUGE, BLEU, and F1 score of unigrams between the human-written and generated summaries.\relax }{figure.caption.5}{}}
-\newlabel{fig:bi}{{6}{5}{ROUGE, BLEU, and F1 score of bigrams between the human-written and generated summaries.\relax }{figure.caption.6}{}}
-\newlabel{fig:tri}{{7}{5}{ROUGE, BLEU, and F1 score of trigrams between the human-written and generated summaries.\relax }{figure.caption.7}{}}
 \bibcite{cohan2018discourse}{{2}{2018}{{Cohan et~al.}}{{Cohan, Dernoncourt, Kim, Bui, Kim, Chang, and Goharian}}}
 \bibcite{devlin2019google}{{3}{2019}{{Devlin et~al.}}{{Devlin, Chang, and Lee}}}
-\bibcite{reza2020}{{4}{2020}{{Kaykobad~Reza et~al.}}{{Kaykobad~Reza, Islam, Siddique, Mostofa~Akbar, and Rahman}}}
-\bibcite{lin2003automatic}{{5}{2003}{{Lin and Hovy}}{{}}}
-\bibcite{liu2019text}{{6}{2019}{{Liu and Lapata}}{{}}}
-\bibcite{mihalcea2004textrank}{{7}{2004}{{Mihalcea and Tarau}}{{}}}
-\bibcite{papineni2002bleu}{{8}{2002}{{Papineni et~al.}}{{Papineni, Roukos, Ward, and Zhu}}}
-\bibcite{rogers2021primer}{{9}{2021}{{Rogers et~al.}}{{Rogers, Kovaleva, and Rumshisky}}}
-\bibcite{rogers2002google}{{10}{2002}{{Rogers}}{{}}}
-\newlabel{tab:means}{{1}{6}{Mean values of the ROUGE, BLEU, and F1 metrics for unigrams, bigrams, and trigrams yielded by TextRank, WordRank, Hybrid64, Hybrid80, and BERTSUM methods. \relax }{table.caption.8}{}}
-\newlabel{tab:mors}{{2}{6}{Margins of error values of the ROUGE, BLEU, and F1 metrics for unigrams, bigrams, and trigrams yielded by TextRank, WordRank, Hybrid64, Hybrid80, and BERTSUM methods. \relax }{table.caption.9}{}}
-\newlabel{tab:time}{{3}{6}{Running time (min) of all five algorithms considered in this project. \relax }{table.caption.10}{}}
+\bibcite{garcia2008text}{{4}{2008}{{Garc{\'\i }a-Hern{\'a}ndez et~al.}}{{Garc{\'\i }a-Hern{\'a}ndez, Montiel, Ledeneva, Rend{\'o}n, Gelbukh, and Cruz}}}
+\bibcite{reza2020}{{5}{2020}{{Kaykobad~Reza et~al.}}{{Kaykobad~Reza, Islam, Siddique, Mostofa~Akbar, and Rahman}}}
+\bibcite{lin2003automatic}{{6}{2003}{{Lin and Hovy}}{{}}}
+\bibcite{liu2019text}{{7}{2019}{{Liu and Lapata}}{{}}}
+\bibcite{mihalcea2004textrank}{{8}{2004}{{Mihalcea and Tarau}}{{}}}
+\bibcite{papineni2002bleu}{{9}{2002}{{Papineni et~al.}}{{Papineni, Roukos, Ward, and Zhu}}}
+\bibcite{rogers2021primer}{{10}{2021}{{Rogers et~al.}}{{Rogers, Kovaleva, and Rumshisky}}}
+\bibcite{rogers2002google}{{11}{2002}{{Rogers}}{{}}}
+\bibcite{widyassari2019literature}{{12}{2019}{{Widyassari et~al.}}{{Widyassari, Affandy, Noersasongko, Fanani, Syukur, and Basuki}}}
 \bibstyle{acl_natbib}
-\gdef \@abspage@last{7}
+\gdef \@abspage@last{9}

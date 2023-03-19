@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{12}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{Bastos et~al.(2021)Bastos, Sales, Di~Cesare, Tayeb, and
@@ -23,6 +23,18 @@ Jacob Devlin, Ming-Wei Chang, and Kenton Lee. 2019.
 \newblock Google, kt, language, ai: Bert: pre-training of deep bidirectional
   transformers for language understanding.
 \newblock In \emph{Proceedings of NAACL-HLT}, pages 4171--4186.
+
+\bibitem[{Garc{\'\i}a-Hern{\'a}ndez et~al.(2008)Garc{\'\i}a-Hern{\'a}ndez,
+  Montiel, Ledeneva, Rend{\'o}n, Gelbukh, and Cruz}]{garcia2008text}
+Ren{\'e}~Arnulfo Garc{\'\i}a-Hern{\'a}ndez, Romyna Montiel, Yulia Ledeneva,
+  Er{\'e}ndira Rend{\'o}n, Alexander Gelbukh, and Rafael Cruz. 2008.
+\newblock \href
+  {https://link.springer.com/chapter/10.1007/978-3-540-88636-5_12} {Text
+  summarization by sentence extraction using unsupervised learning}.
+\newblock In \emph{MICAI 2008: Advances in Artificial Intelligence: 7th Mexican
+  International Conference on Artificial Intelligence, Atizap{\'a}n de
+  Zaragoza, Mexico, October 27-31, 2008 Proceedings 7}, pages 133--143.
+  Springer.
 
 \bibitem[{Kaykobad~Reza et~al.(2020)Kaykobad~Reza, Islam, Siddique,
   Mostofa~Akbar, and Rahman}]{reza2020}
@@ -77,5 +89,16 @@ Ian Rogers. 2002.
 \newblock \href
   {https://cs.wmich.edu/gupta/teaching/cs3310/lectureNotes_cs3310/Pagerank%20Explained%20Correctly%20with%20Examples_www.cs.princeton.edu_~chazelle_courses_BIB_pagerank.pdf}
   {The google pagerank algorithm and how it works}.
+
+\bibitem[{Widyassari et~al.(2019)Widyassari, Affandy, Noersasongko, Fanani,
+  Syukur, and Basuki}]{widyassari2019literature}
+Adhika~Pramita Widyassari, Affandy Affandy, Edy Noersasongko, Ahmad~Zainul
+  Fanani, Abdul Syukur, and Ruri~Suko Basuki. 2019.
+\newblock \href
+  {https://ieeexplore.ieee.org/abstract/document/8938454?casa_token=A7NDwOTD9boAAAAA:guiRc1dTp7kmsJgGI8BnF0q9HBU5Eia4CcFCsyn8Ls74UgvxFNpkIbzHcgwGphKINWJf25Q}
+  {Literature review of automatic text summarization: research trend, dataset
+  and method}.
+\newblock In \emph{2019 International Conference on Information and
+  Communications Technology (ICOIACT)}, pages 491--496. IEEE.
 
 \end{thebibliography}

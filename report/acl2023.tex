@@ -31,6 +31,7 @@
 \usepackage{inconsolata}
 
 \usepackage{graphicx}
+\usepackage{xcolor}
 
 
 % If the title and author information does not fit in the area allocated, uncomment the following
@@ -65,13 +66,19 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-This project aims at building a tool to generate a summary of a biomedical research manuscript automatically based on the main text. To this end, extractive summarisation is employed. The motivation behind choosing extractive summarisation is, in essense, the neccessety to preserve key sentences from the main text. Extractive summarisation will retrieve sentences based on their importance without rephrasing them, thereby excluding misinterpretations. The meaning preservation is crucial for scientific texts. In this project, PubMed dataset is used. A subset of 100 articles and their abstracts have been manually looked through and filtered so that articles and abstracts have similar characteristincs in terms of relative number of sentences of the abstract to the main text. As a result, 24 articles and their human-written summaries (abstracts) were selected. Three algorithms were chosen for extractive summarisation: TextRank, WordRank, and their combination. Their performance was assessed using ROUGE (recall), BLEU (precision), and F1 score. The obtained results show that Y better suits for the considered task. 
+This project aims at offering a tool to generate a summary of a biomedical research manuscript automatically based on the main text. To this end, extractive summarisation is employed. The motivation behind choosing extractive summarisation is, in essense, the neccessety to preserve key sentences from the main text. Extractive summarisation will retrieve sentences based on their importance without rephrasing them, thereby excluding misinterpretations. The meaning preservation is crucial for scientific texts. In this project, PubMed dataset is used. A subset of 100 articles and their abstracts have been manually looked through and filtered so that articles and abstracts have similar characteristics in terms of relative number of sentences of the abstract to the main text. As a result, 24 articles and their human-written summaries (abstracts) were selected. Four algorithms were chosen for extractive summarisation: TextRank, WordRank, WordRank+TextRank, and BERSUM. Their performance was assessed using ROUGE (recall), BLEU (precision), and F1 score. The obtained results show that TextRank better than other algorithms suits for the considered task. 
 
 \end{abstract}
 
 \section{Introduction}
 
-With increasing volume of published articles in medical research, it becomes increasingly difficult for doctors, medical staff, and public health officials to stay updated. Sometimes, a
+With increasing volume of published articles in medical research, it becomes increasingly difficult for doctors, medical staff, and public health officials to stay updated. Sometimes, a quick summary of an article can give sufficient information about whether a person wants to continue reading its full version. Not all texts have an abstract, and summarisation of such texts could assist the reader. Furthermore, sometimes the written abstract is too short and does not contain necessary information to decide upon reading the full article. Summarisation can assist in this case by generating a sufficiently large summary of the text. Ideally, the generated summary should have a well-defined structure, but this is beyond the scope of this project.
+
+Summarisation techniques are classified into supervised and unsupervised  \citep{widyassari2019literature}. Supervised approaches require labeled datasets. The literature has reported examples of supervised text summarisation using AdaBoost and SVM classification \citep{widyassari2019literature}. Unsupervised models include TextRank \citep{mihalcea2004textrank} and K-means \citep{garcia2008text} among others.
+
+Furthermore, summarisation techniques are classified into abstractive and extractive \citep{widyassari2019literature}. In extractive summarization, the text parts are extracted as a summary without modifications. In contrast, in abstractive summarization, a summary consists of new phrases or has words not present in the original text.
+
+For summarisation of medical articles, extractive rather than abstractive summarisation is preferable. This is because it is crucial to preserve the content without modifications. Furthermore, as the labelled datasets are scarce in the literature, in this project, an unsupervised approach is chosen. Therefore, the objective of this project is to identify the best-performing tool for extractive summarisation of medical articles. The tested methods include TextRank, WordRank, WordRank+TextRank, and BERTSUM.
 
 \section{Theory}
 \subsection{PageRank}
@@ -118,14 +125,14 @@ WordRank is a modified version of TextRank \citep{reza2020}. The initial text is
 
 \subsection{BERTSUM}
 
-Bidirectional Encoder Representations from Transformers (BERT) is a family of masked-language models published in 2018 by Google \citep{devlin2019google}. The BERT architecture and operation principle is explained by \citet{rogers2021primer}. Citing them ``Fundamentally, BERT is a stack of Transformer encoder layers that consist of multiple self-attention “heads”. For every input token in a sequence, each head computes key, value, and query vectors, used to create a weighted representation. The outputs of all heads in the same layer are combined and run through a fully connected layer. Each layer is wrapped with a skip connection and followed by layer normalization.''
+Bidirectional Encoder Representations from Transformers (BERT) is a family of masked-language models published in 2018 by Google \citep{devlin2019google}. The BERT architecture and operation principle is explained by \citet{rogers2021primer}. Citing them ``Fundamentally, BERT is a stack of Transformer encoder layers that consist of multiple self-attention “heads”. For every input token in a sequence, each head computes key, value, and query vectors, used to create a weighted representation. The outputs of all heads in the same layer are combined and run through a fully connected layer. Each layer is wrapped with a skip connection and followed by layer normalisation.''
 
 The use of BERT for extractive summarisation is outlined by \citet{liu2019text}. The authors modified the BERT architecture (BERTSUM) for extractive text summarisation. Both architectures are shown in Fig. \ref{fig:bert}
 
 
 \begin{figure*}[!h]
 \centering
-\includegraphics[scale = 0.4]{../figures/bert.png}
+\includegraphics[scale = 0.35]{../figures/bert.png}
 \caption{Figure source: \citet{liu2019text}.Architecture of the original BERT model (left) and BERTSUM (right). The input document is a sequence on top. It is followed by the summation of three types of embeddings for each token. The summed vectors are used
 as input embeddings to several bidirectional Transformer layers, generating contextual vectors for each token. BERTSUM extends BERT by inserting multiple [CLS] symbols to learn sentence representations and using interval segmentation embeddings (illustrated in red and green color) to distinguish multiple sentences.\label{fig:bert}}
 \end{figure*}
@@ -164,7 +171,7 @@ For this project, I have looked through 100 articles and considered only article
 
 An example of the beginning of one chosen article is as follows:
 
-\texttt{'["anxiety affects quality of life in those living with parkinson \'s disease ( pd ) more so than overall cognitive status , motor deficits , apathy , and depression [ 13 ] .", \'although anxiety and depression are often related and coexist in pd patients , recent research suggests that anxiety rather than depression is the most prominent and prevalent mood disorder in pd [ 5 , 6 ] . yet ,\', }
+\texttt{'["anxiety affects quality of life in those living with parkinson \'s disease ( pd ) more so than overall cognitive status, motor deficits, apathy, and depression [ 13 ] .", \'although anxiety and depression are often related and coexist in pd patients, recent research suggests that anxiety rather than depression is the most prominent and prevalent mood disorder in pd [ 5, 6 ] . yet,\', }
 
 The beginning of the corresponding summary is as follows:
 
@@ -299,12 +306,64 @@ Running time (min) of all five algorithms considered in this project.
 }
 \end{table*}
 
-\subsection{Example Result -- include if time -- if not -- limitation}
+\subsection{Example result}
+
+The human-written summary: "\textcolor{cyan}{Research on the implications of anxiety in parkinson's disease (pd) has been neglected} despite its prevalence in nearly 50\% of patients and its negative impact on quality of life. Previous reports have noted that neuropsychiatric symptoms impair cognitive performance in pd patients; \textcolor{cyan}{However, to date, no study has directly compared pd patients with and without anxiety to examine the impact of anxiety on cognitive impairments in pd}. \textcolor{gray}{This study compared cognitive performance across 50 pd participants with and without anxiety (17 pda+; 33 pda)}, who underwent neurological and neuropsychological assessment. Group performance was compared across the following cognitive domains: simple attention/visuomotor processing speed, executive function (e.g., set-shifting), working memory, language, and memory/new verbal learning. \textcolor{teal}{Results showed that pda+ performed significantly worse on the digit span forward and backward test and part b of the trail making task (tmt-b) compared to the pda group}. There were no group differences in verbal fluency, logical memory, or tmt-a performance. In conclusion, anxiety in pd has a measurable impact on working memory and attentional set-shifting."
+
+The TextRank-generated summary: '\textcolor{teal}{More specifically, we found that pd patients with anxiety were more impaired on the trail making test part b which assessed attentional set-shifting, on both digit span tests which assessed working memory and attention, and to a lesser extent on the logical memory test which assessed memory and new verbal learning compared to pd patients without anxiety}. \textcolor{gray}{Taken together, thus, all participants who scored within a  depressed  (hads - d > 6) range were excluded from this study, in attempt to examine a refined sample of pd patients with and without anxiety in order to determine the independent effect of anxiety on cognition}. Future studies should perform diagnostic interviews with participants (e.g., using dsm - v criteria) rather than relying on self-reported measures to group participants, in order to better understand whether the type of anxiety disorder (e.g., social anxiety, phobias, panic disorders, and generalized anxiety) influences cognitive performance differently in pd. \textcolor{gray}{Given that research on healthy young adults suggests that anxiety reduces processing capacity and impairs processing efficiency, especially in the central executive and attentional systems of working memory [26, 27], we hypothesized that pd patients with anxiety would show impairments in attentional set-shifting and working memory compared to pd patients without anxiety}. \textcolor{cyan}{Considering many previous studies have investigated the influence of depression on cognition in pd without accounting for the presence of anxiety and the inconsistent findings reported to date}, we recommend that future research should try to disentangle the influence of anxiety versus depression on cognitive impairments in pd. Considering the growing number of clinical trials for treating depression, \textcolor{cyan}{there are few if any for the treatment of anxiety in pd. It is also striking that, to date, no study has examined the influence of anxiety on cognition in pd by directly comparing groups of pd patients with and without anxiety while excluding depression}. For example, may disrupt compensatory processes in pd patients and explain the cognitive impairments specifically in working memory and attention seen in pd patients with anxiety.'
+
+This example clearly shows that TextRank favours longer sentences. Does this example make sense? The study motivation (in cyan) is captured in the generated summary. The study objective (in grey  is captured to some extent. Methods are been captured. Results (in teal) have been captured to some extent. Conclusion is been captured. I believe that the generated summary is okay but could be better.
 
 \section{Discussion}
 
+First, it should be emphasised that the running time of TextRank is superior. If a fast summarisation should be performed, TextRank generates the text fast with a good F1 score in comparison with other investigated algorithms. 
+
+Confirming the discussion by \citet{reza2020}, TextRank favouring longer sentences results in higher BLEU than WordRank for unigrams, bigrams, and  trigrams. However, WordRank results in higher ROUGE than TextRank only for unigrams. TextRank starts to dominate WordRank in terms of the mean ROUGE values when assessing bigram and trigram co-occurrence.
+
+The best-performing model is TextRank considering the low running time and the highest F1\_2 and F1\_3 scores. The F1\_1 score of TextRank (36.0) is within the margin of error of BERTSUM (37.7 $\pm$ 3.9). Thus, considering the long running time of BERTSUM, TextRank should be favoured for the task at hand.
+
+Important result of the analysis is that combining WordRank with TextRank not necessarily yields better F1 scores than TextRank. However, this conclusion cannot be made because TextRank, Hybrid64, and Hybrid80 all yield similar results, considering their margins of error.
+
+\subsection{Comparison with \citet{reza2020}}
+
+\citet{reza2020} used the same dataset for extractive summarisation. However, their number of samples was 9,978 (it was 24 in this project). Furthermore, they obtained median F1 scores rather than mean F1 scores. Their results are as follows:
+\begin{verbatim}
+ WordRank: median(F1_1) = 35.56 and 
+           SD(F1_1) = 0.1092 
+ TextRank: median(F1_1) = 38.47 and 
+           SD(F1_1) = 0.1085 
+ Hybrid64: median(F1_1) = 38.28 and 
+           SD(F1_1) = 0.1090 
+ WordRank: median(F1_2) = 14.95 and 
+           SD(F1_2) = 0.0825  
+ TextRank: median(F1_2) = 16.56 and 
+           SD(F1_2) = 0.0856 
+ Hybrid64: median(F1_2) = 16.70 and 
+           SD(F1_2) = 0.0862  
+\end{verbatim}
+
+Hence, the median F1 scores are higher for all algorithms than their means in this work. Perhaps, this is achieved by avoiding excessive influence of bad results, which median can do because it is robust to outliers. 
+
+That is, for WordRank, their F1\_1 ($35.56$) is higher than $30.3 \pm 3.6$ including margin of error. For TextRank, their F1\_1 ($38.47$) is within the interval of $36.0 \pm 3.7$ (95\% confidence) obtained herein. For Hybrid64, their F1\_1 ($38.28$) is within the interval of $35.7 \pm 3.2$ (95\% confidence) obtained herein. 
+
+Now, let us compare the results for bigram co-occurrence. For WordRank, their F1\_2 ($14.95$) is higher than $10.4 \pm 2.8$ including margin of error. For TextRank, their F1\_2 ($16.56$) is higher than $13.4 \pm 3.2$ including margin of error. For Hybrid64, their F1\_2 ($16.70$) is higher than $12.6 \pm 2.9$ including margin of error. 
+
+However, comparing the best-performing models, TextRank yielded the highest median F1\_1 score ($38.47$) by \citet{reza2020}. In this project, BERTSUM yielded the highest mean F1\_1 score (37.7 $\pm$ 3.9). These results are similar, considering margin of error. For bigram co-occurrence, Hybrid64 yielded the highest median F1\_2 score ($16.70$) by \citet{reza2020}. In this project, TextRank yielded an F1\_2 score of $13.4 \pm 3.2$, being lower than 16.70 including margin of error.
+
+
+\subsection{Limitations and future work}
+
+The biggest limitation of this project is low amount of data. I believe that more data samples could be collected for assessment. In addition, articles meeting different conditions than those outlined in Sect. \ref{sect:data} could be collected. The obtained results could be compared. This remains future work.
+
+Another limitation is absence of the inverse hybrid analysis: run TextRank first and WordRank second. This experiment should be conducted and remains future work.
+
+The third limitation is absence of the analysis of the third variant of a hybrid model. BERTSUM yielded high BLEU scores when assessing unigram and bigram co-occurrence. Thus, BERTSUM could be combined with WordRank yielding high ROUGE values. This could compensate for the low ROUGE of BERTSUM and the low BLEU of WordRank. It would be interesting to perform this analysis. This remains future work.
+
+Finally, pre-trained BERTSUM could be fine-tuned on the large amount of collected data from PubMed. The obtained model results could be obtained and compared with the results obtained in this project. This remains future work.
+
 \section{Conclusion}
 
+In this project, extractive summarisation of medical articles from PubMed dataset was explored. First, a subset of 24 data samples with sufficiently long articles and abstracts being 8\%--12\% long of the main article texts (in terms of number of sentences) were collected. After pre-processing, TextRank, WordRank, Hybrid64, Hybrid80, and BERTSUM were implemented. According to the obtained results, TextRank is the fastest algorithm yielding best or second-best performance in terms of F1 scores when assessing unigram, bigram, and trigram co-occurrence. The F1 score of TextRank for unigram co-occurrence is $36.0 \pm 3.7$, which can be perceived as a low value. However, the human-generated abstracts are abstractive rather than extractive, which means that it is unreasonable to expect an F1 score close to 100\%. This leads us actually to the necessity to collect a dataset especially suitable for the task at hand. This dataset could be same PubMed articles, but instead of PuBMed abstracts, one could extract sentences from articles based on their perceived importance and combine the extracted sentences into a summary. I believe that the work conducted in this project still holds high value in terms of algorithm comparison. Furthermore, the generated summaries are acceptable and make a good sense according to the provided example.
 
 
 % Entries for the entire Anthology, followed by custom entries
